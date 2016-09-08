@@ -14,7 +14,13 @@
  */
 // write your code here
 
-
+var capitals = [
+    "New York": "Albany",
+    "Ohio":"Columbus",
+    "Florida": "Tallahasee",
+    "Georgia": "Atlanta",
+    "Kentucky": "Frankfort"
+]
 
 
 
@@ -23,7 +29,7 @@
 /*: question2
  ### 2. What is the type of the dictionary you created in Question 1?
  */
-
+//Dictionary of String keys to String values
 
 
 
@@ -38,7 +44,7 @@
 
 
 
-
+var capital = capitals["Florida"]
 
 
 
@@ -48,7 +54,9 @@
  */
 // write your code here
 
-
+if let capital = capital {
+    print ("The capital of Florida is \(capital)")
+}
 
 
 
@@ -61,6 +69,7 @@
 // write your code here
 
 
+var anotherCapital = capitals["Pennsylvania"]
 
 
 
@@ -72,8 +81,9 @@
  */
 // write your code here
 
-
-
+if let anotherCapital = anotherCapital {
+    print ("I don't know Pennsylvania's capital")
+}
 
 
 
@@ -85,7 +95,7 @@
 // write your code here
 
 
-
+capitals["Pennsylvania"] = "Harrisburg"
 
 
 
@@ -96,7 +106,12 @@
  */
 // write your code here
 
+capital = capitals["Pennsylvania"]
 
+
+if let capital = capital {
+    print ("Pennsylvania's capital is \(capital)")
+}
 
 
 
@@ -108,9 +123,9 @@
  */
 // write your code here
 
+capitals["Pennsylvania"] = nil
 
-
-
+print (capitals)
 
 
 
@@ -120,9 +135,11 @@
  */
 let state = "New York"
 // write your code here
+capital = capitals["New York"]
 
-
-
+if let capital = capital {
+    print ("The capital of \(state) is \(capital)")
+}
 
 
 
@@ -141,6 +158,17 @@ let state = "New York"
 // write your code here
 
 
+var Nirvana = ["Kurt Cobain", "Krist Novoselic", "Dave Grohl"]
+var theBeatles = ["John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr"]
+var theBreeders = ["Kim Deal", "Kelley Deal", "Josephine Wiggs", "Jim Macpherson"]
+var Pixies = ["Frank Black", "Joey Santiago", "Kim Deal", "David Lovering"]
+
+var bandDictionary = [
+    "Nirvana": Nirvana,
+    "The Beatles": theBeatles,
+    "The Breeders": theBreeders,
+    "Pixies": Pixies
+]
 
 
 
@@ -153,7 +181,7 @@ let state = "New York"
  ### 12. What is the type of the dictionary you created in Question 11?
  */
 
-
+//Dictionary of String keys to [String] values
 
 
 
@@ -166,6 +194,12 @@ let state = "New York"
 let bandName = "Pixies"
 // write your code here
 
+var pixiesBand = bandDictionary[bandName]
+
+
+if let pixiesBand = pixiesBand {
+    print ("Pixies band members are: \(pixiesBand)")
+}
 
 
 
